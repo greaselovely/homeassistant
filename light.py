@@ -27,7 +27,7 @@ def load_config():
         """
         We'll build an empty config.json file.
         """
-        config_init_starter = {"hass" : {"hass_access_token" : "", "hass_url": "", "light": ""}}
+        config_init_starter = {"hass" : {"hass_access_token" : "", "hass_url": "http://127.0.0.1:8123/api", "light": "light.name_here"}}
         with open(config_path, 'w') as file:
             json.dump(config_init_starter, file, indent=2)
          # recursion, load the config file since it wasn't found earlier
